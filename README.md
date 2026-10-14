@@ -47,7 +47,7 @@ Physical formats averaged 10.3 years (n=10), digital 9.0 (n=3), but the samples 
 ## Repo layout
 
 ```
-data/                      Tableau Public export, unmodified
+the_data.csv/              Tableau Public export, unmodified
 R/01_exploration/          peak/decay table, lifecycle shape, first look at interactions
 R/02_interactions/         all 136 pairs, clustering + bootstrap + changepoint search
 R/03_regression_diagnostics/  leverage, Cook's D, DFFITS, IQR fences, OLS assumptions, block bootstrap
