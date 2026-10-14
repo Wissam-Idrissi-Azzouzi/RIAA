@@ -44,24 +44,6 @@ Physical formats averaged 10.3 years (n=10), digital 9.0 (n=3), but the samples 
 * **Total units** peaked in 2008 (1.92B), but download singles were 54% of that year's units. Excluding them the peak is 1999 (1.16B). See `figures/units_total_vs_ex_download_singles.png`.
 * **Lifecycle models** (Bass, Gaussian, exponential-to-floor, logistic/Gompertz for LP/EP) were backtested rolling-origin; they agree on direction but not on the level the survivors settle at.
 
-## Repo layout
-
-```
-the_data.csv/              Tableau Public export, unmodified
-R/01_exploration/          peak/decay table, lifecycle shape, first look at interactions
-R/02_interactions/         all 136 pairs, clustering + bootstrap + changepoint search
-R/03_regression_diagnostics/  leverage, Cook's D, DFFITS, IQR fences, OLS assumptions, block bootstrap
-R/04_clustering/           Ward hierarchical vs k-means, all 17 formats
-R/05_survival/             Kaplan-Meier with right-censoring, digital vs physical
-R/06_forecasting/          exponential vs levelling-off projections
-R/07_lifecycle_models/     Bass / Gaussian / floor / logistic fits and rolling-origin backtests
-R/08_figures/              charts (all axes labelled in units)
-R/archive_invalid_inflation/  the invalid CPI script, kept as a record
-results/                   CSV outputs
-figures/                   PNG charts
-run_all.R                  runs everything in order (about 90 seconds)
-```
-
 ## Reproduce
 
 Base R 4.3+ (uses the `survival` package that ships with R). From the repo root:
